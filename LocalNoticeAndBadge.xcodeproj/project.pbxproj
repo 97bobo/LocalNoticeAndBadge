@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		460534F3C574A92CC7EBE814 /* libPods-LocalNoticeAndBadge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B859D7B29441E25240DE08E4 /* libPods-LocalNoticeAndBadge.a */; };
+		52754DDC1D6AFD5600C3626F /* CZPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52754DDB1D6AFD5600C3626F /* CZPickerView.m */; };
+		52801AF81D6BE2B6006197E6 /* ClockTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52801AF71D6BE2B6006197E6 /* ClockTableViewController.m */; };
+		52801AFB1D6BE2CF006197E6 /* ClockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52801AFA1D6BE2CF006197E6 /* ClockTableViewCell.m */; };
+		52801B001D6BF938006197E6 /* DataBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 52801AFF1D6BF938006197E6 /* DataBaseTool.m */; };
+		52801B031D6BFB3E006197E6 /* LocalNoticeModelDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 52801B021D6BFB3E006197E6 /* LocalNoticeModelDBTool.m */; };
+		52801B091D6C4B8D006197E6 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 52801B081D6C4B8D006197E6 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52FDE2F01D669D2500332736 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FDE2EF1D669D2500332736 /* main.m */; };
+		52FDE2F31D669D2500332736 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FDE2F21D669D2500332736 /* AppDelegate.m */; };
+		52FDE2FB1D669D2500332736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FDE2FA1D669D2500332736 /* Assets.xcassets */; };
+		52FDE2FE1D669D2500332736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FDE2FC1D669D2500332736 /* LaunchScreen.storyboard */; };
+		52FDE30A1D66FE0B00332736 /* LocalNoticeSetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FDE3091D66FE0B00332736 /* LocalNoticeSetTableViewController.m */; };
+		52FDE3111D67013100332736 /* LocalNoticeSetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FDE30F1D67013100332736 /* LocalNoticeSetTableViewCell.m */; };
+		52FDE3121D67013100332736 /* LocalNoticeSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FDE3101D67013100332736 /* LocalNoticeSetTableViewCell.xib */; };
+		52FDE3151D67087B00332736 /* LocalNoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FDE3141D67087B00332736 /* LocalNoticeModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52754DDA1D6AFD5600C3626F /* CZPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZPickerView.h; sourceTree = "<group>"; };
+		52754DDB1D6AFD5600C3626F /* CZPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZPickerView.m; sourceTree = "<group>"; };
+		52801AF61D6BE2B6006197E6 /* ClockTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTableViewController.h; sourceTree = "<group>"; };
+		52801AF71D6BE2B6006197E6 /* ClockTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTableViewController.m; sourceTree = "<group>"; };
+		52801AF91D6BE2CF006197E6 /* ClockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTableViewCell.h; sourceTree = "<group>"; };
+		52801AFA1D6BE2CF006197E6 /* ClockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTableViewCell.m; sourceTree = "<group>"; };
+		52801AFC1D6BE384006197E6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		52801AFD1D6BF938006197E6 /* ColumnPropertyMappingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnPropertyMappingDelegate.h; sourceTree = "<group>"; };
+		52801AFE1D6BF938006197E6 /* DataBaseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseTool.h; sourceTree = "<group>"; };
+		52801AFF1D6BF938006197E6 /* DataBaseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseTool.m; sourceTree = "<group>"; };
+		52801B011D6BFB3E006197E6 /* LocalNoticeModelDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNoticeModelDBTool.h; sourceTree = "<group>"; };
+		52801B021D6BFB3E006197E6 /* LocalNoticeModelDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNoticeModelDBTool.m; sourceTree = "<group>"; };
+		52801B071D6C4B8D006197E6 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		52801B081D6C4B8D006197E6 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		52FDE2EB1D669D2500332736 /* LocalNoticeAndBadge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNoticeAndBadge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FDE2EF1D669D2500332736 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52FDE2F11D669D2500332736 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52FDE2F21D669D2500332736 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52FDE2FA1D669D2500332736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52FDE2FD1D669D2500332736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52FDE2FF1D669D2500332736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FDE3081D66FE0B00332736 /* LocalNoticeSetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNoticeSetTableViewController.h; sourceTree = "<group>"; };
+		52FDE3091D66FE0B00332736 /* LocalNoticeSetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNoticeSetTableViewController.m; sourceTree = "<group>"; };
+		52FDE30E1D67013100332736 /* LocalNoticeSetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNoticeSetTableViewCell.h; sourceTree = "<group>"; };
+		52FDE30F1D67013100332736 /* LocalNoticeSetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNoticeSetTableViewCell.m; sourceTree = "<group>"; };
+		52FDE3101D67013100332736 /* LocalNoticeSetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalNoticeSetTableViewCell.xib; sourceTree = "<group>"; };
+		52FDE3131D67087B00332736 /* LocalNoticeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNoticeModel.h; sourceTree = "<group>"; };
+		52FDE3141D67087B00332736 /* LocalNoticeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNoticeModel.m; sourceTree = "<group>"; };
+		6E572B784A1743E761B71C24 /* Pods-LocalNoticeAndBadge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalNoticeAndBadge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalNoticeAndBadge/Pods-LocalNoticeAndBadge.debug.xcconfig"; sourceTree = "<group>"; };
+		B000F469156A95BA5F55B4D7 /* Pods-LocalNoticeAndBadge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalNoticeAndBadge.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalNoticeAndBadge/Pods-LocalNoticeAndBadge.release.xcconfig"; sourceTree = "<group>"; };
+		B859D7B29441E25240DE08E4 /* libPods-LocalNoticeAndBadge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalNoticeAndBadge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52FDE2E81D669D2500332736 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				460534F3C574A92CC7EBE814 /* libPods-LocalNoticeAndBadge.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52FDE2E21D669D2500332736 = {
+			isa = PBXGroup;
+			children = (
+				52FDE2ED1D669D2500332736 /* LocalNoticeAndBadge */,
+				52FDE2EC1D669D2500332736 /* Products */,
+				5DF872DEE96BEED947246D5F /* Pods */,
+				6DD82C43CAFACD8D232C8A00 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		52FDE2EC1D669D2500332736 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52FDE2EB1D669D2500332736 /* LocalNoticeAndBadge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52FDE2ED1D669D2500332736 /* LocalNoticeAndBadge */ = {
+			isa = PBXGroup;
+			children = (
+				52FDE2F11D669D2500332736 /* AppDelegate.h */,
+				52FDE2F21D669D2500332736 /* AppDelegate.m */,
+				52FDE3081D66FE0B00332736 /* LocalNoticeSetTableViewController.h */,
+				52FDE3091D66FE0B00332736 /* LocalNoticeSetTableViewController.m */,
+				52FDE30E1D67013100332736 /* LocalNoticeSetTableViewCell.h */,
+				52FDE30F1D67013100332736 /* LocalNoticeSetTableViewCell.m */,
+				52FDE3131D67087B00332736 /* LocalNoticeModel.h */,
+				52FDE3141D67087B00332736 /* LocalNoticeModel.m */,
+				52801B011D6BFB3E006197E6 /* LocalNoticeModelDBTool.h */,
+				52801B021D6BFB3E006197E6 /* LocalNoticeModelDBTool.m */,
+				52FDE3101D67013100332736 /* LocalNoticeSetTableViewCell.xib */,
+				52801AF61D6BE2B6006197E6 /* ClockTableViewController.h */,
+				52801AF71D6BE2B6006197E6 /* ClockTableViewController.m */,
+				52801AF91D6BE2CF006197E6 /* ClockTableViewCell.h */,
+				52801AFA1D6BE2CF006197E6 /* ClockTableViewCell.m */,
+				52754DDA1D6AFD5600C3626F /* CZPickerView.h */,
+				52754DDB1D6AFD5600C3626F /* CZPickerView.m */,
+				52801AFC1D6BE384006197E6 /* PrefixHeader.pch */,
+				52801AFD1D6BF938006197E6 /* ColumnPropertyMappingDelegate.h */,
+				52801AFE1D6BF938006197E6 /* DataBaseTool.h */,
+				52801AFF1D6BF938006197E6 /* DataBaseTool.m */,
+				52801B071D6C4B8D006197E6 /* JSONKit.h */,
+				52801B081D6C4B8D006197E6 /* JSONKit.m */,
+				52FDE2FA1D669D2500332736 /* Assets.xcassets */,
+				52FDE2FC1D669D2500332736 /* LaunchScreen.storyboard */,
+				52FDE2FF1D669D2500332736 /* Info.plist */,
+				52FDE2EE1D669D2500332736 /* Supporting Files */,
+			);
+			path = LocalNoticeAndBadge;
+			sourceTree = "<group>";
+		};
+		52FDE2EE1D669D2500332736 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52FDE2EF1D669D2500332736 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DF872DEE96BEED947246D5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E572B784A1743E761B71C24 /* Pods-LocalNoticeAndBadge.debug.xcconfig */,
+				B000F469156A95BA5F55B4D7 /* Pods-LocalNoticeAndBadge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6DD82C43CAFACD8D232C8A00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B859D7B29441E25240DE08E4 /* libPods-LocalNoticeAndBadge.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52FDE2EA1D669D2500332736 /* LocalNoticeAndBadge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52FDE3021D669D2500332736 /* Build configuration list for PBXNativeTarget "LocalNoticeAndBadge" */;
+			buildPhases = (
+				0E07027A9244FFFEB34EEE54 /* [CP] Check Pods Manifest.lock */,
+				52FDE2E71D669D2500332736 /* Sources */,
+				52FDE2E81D669D2500332736 /* Frameworks */,
+				52FDE2E91D669D2500332736 /* Resources */,
+				8C07F85C9985974AE3C3DC73 /* [CP] Embed Pods Frameworks */,
+				AD7CE57785BFCD8078B1B8A8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalNoticeAndBadge;
+			productName = LocalNoticeAndBadge;
+			productReference = 52FDE2EB1D669D2500332736 /* LocalNoticeAndBadge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52FDE2E31D669D2500332736 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = CBayel;
+				TargetAttributes = {
+					52FDE2EA1D669D2500332736 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 52FDE2E61D669D2500332736 /* Build configuration list for PBXProject "LocalNoticeAndBadge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52FDE2E21D669D2500332736;
+			productRefGroup = 52FDE2EC1D669D2500332736 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52FDE2EA1D669D2500332736 /* LocalNoticeAndBadge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52FDE2E91D669D2500332736 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FDE3121D67013100332736 /* LocalNoticeSetTableViewCell.xib in Resources */,
+				52FDE2FE1D669D2500332736 /* LaunchScreen.storyboard in Resources */,
+				52FDE2FB1D669D2500332736 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E07027A9244FFFEB34EEE54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C07F85C9985974AE3C3DC73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocalNoticeAndBadge/Pods-LocalNoticeAndBadge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD7CE57785BFCD8078B1B8A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocalNoticeAndBadge/Pods-LocalNoticeAndBadge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52FDE2E71D669D2500332736 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52801AFB1D6BE2CF006197E6 /* ClockTableViewCell.m in Sources */,
+				52801B031D6BFB3E006197E6 /* LocalNoticeModelDBTool.m in Sources */,
+				52FDE3111D67013100332736 /* LocalNoticeSetTableViewCell.m in Sources */,
+				52FDE3151D67087B00332736 /* LocalNoticeModel.m in Sources */,
+				52FDE2F31D669D2500332736 /* AppDelegate.m in Sources */,
+				52801B001D6BF938006197E6 /* DataBaseTool.m in Sources */,
+				52801AF81D6BE2B6006197E6 /* ClockTableViewController.m in Sources */,
+				52FDE30A1D66FE0B00332736 /* LocalNoticeSetTableViewController.m in Sources */,
+				52FDE2F01D669D2500332736 /* main.m in Sources */,
+				52754DDC1D6AFD5600C3626F /* CZPickerView.m in Sources */,
+				52801B091D6C4B8D006197E6 /* JSONKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52FDE2FC1D669D2500332736 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52FDE2FD1D669D2500332736 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52FDE3001D669D2500332736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		52FDE3011D669D2500332736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52FDE3031D669D2500332736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E572B784A1743E761B71C24 /* Pods-LocalNoticeAndBadge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LocalNoticeAndBadge/PrefixHeader.pch";
+				INFOPLIST_FILE = LocalNoticeAndBadge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cbayel.LocalNoticeAndBadge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52FDE3041D669D2500332736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B000F469156A95BA5F55B4D7 /* Pods-LocalNoticeAndBadge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LocalNoticeAndBadge/PrefixHeader.pch";
+				INFOPLIST_FILE = LocalNoticeAndBadge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cbayel.LocalNoticeAndBadge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52FDE2E61D669D2500332736 /* Build configuration list for PBXProject "LocalNoticeAndBadge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FDE3001D669D2500332736 /* Debug */,
+				52FDE3011D669D2500332736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52FDE3021D669D2500332736 /* Build configuration list for PBXNativeTarget "LocalNoticeAndBadge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FDE3031D669D2500332736 /* Debug */,
+				52FDE3041D669D2500332736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52FDE2E31D669D2500332736 /* Project object */;
+}

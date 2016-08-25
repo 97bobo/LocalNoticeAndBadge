@@ -1,0 +1,127 @@
+//
+//  PrefixHeader.pch
+//  LocalNoticeAndBadge
+//
+//  Created by gcf on 16/8/23.
+//  Copyright © 2016年 CBayel. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define DLog(...)
+#endif
+
+//设备宽高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+//元素间隙
+#define kGap0 0
+#define kGap5 5
+#define kGap10 10
+#define kGap15 15
+#define kGap20 20
+#define kGap25 25
+#define kGap30 30
+#define kGap35 35
+#define kGap40 40
+#define kGap45 45
+#define kGap50 50
+#define kGap60 60
+#define kGap100 100
+//行高
+#define kLineHeight25 25
+#define kLineHeight20 20
+//字体大小
+#define kFontSize15 15
+#define kFontSize13 13
+
+//常用颜色
+#define kGray [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1]
+#define kBlue [UIColor colorWithRed:8/255.0 green:52/255.0 blue:124/255.0 alpha:1]
+#define kCyan [UIColor colorWithRed:92/255.0 green:157/255.0 blue:255/255.0 alpha:1]
+
+//cell内icon大小
+#define kImgWidth 0
+#define kImgWidthR 50
+#define kLabelWidth (kScreenWidth - kImgWidth - kGap30)
+
+//IOS7自动在ScollView添加64px空白
+#define kBlankHeight 64
+//公司logo高度
+#define kLogoHeight 72
+
+//搜索选项按钮宽度
+#define kSearchSelectBtnWidth 90
+//搜索下拉框背景宽度
+#define kSearchSelectBgWidth 150
+//搜索框高度
+#define kSearchTextboxHeight 44
+//搜索框左右间距
+#define kSearchLR 3
+
+//系统版本号
+#define kIOSVersion [UIDevice currentDevice].systemVersion.doubleValue
+
+//用户基本信息
+#define kUserDefault [NSUserDefaults standardUserDefaults]
+#define kUserDefaultName [kUserDefault objectForKey:@"name"]
+#define kUserDefaultPassword [kUserDefault objectForKey:@"password"]
+#define kUserDefaultPToken [kUserDefault objectForKey:@"pToken"]
+#define kUserDefaultVToken [kUserDefault objectForKey:@"vToken"]
+#define kUserDefaultsCookie @"userDefaultsCookie"
+
+#define kUserDefaultNameFund [kUserDefault objectForKey:@"nameFund"]
+#define kUserDefaultPasswordFund [kUserDefault objectForKey:@"passwordFund"]
+#define kUserDefaultsCookieFund @"userDefaultsCookieFund"
+
+//APP背景图片
+//#define kAppBg @"appBg"
+#define kAppBg @"loginBg.jpg"
+
+
+#define kWelcomeHeight 80
+#define kWelcomeTop (kScreenHeight-(kWelcomeHeight+kScreenWidth+kGap50))/2
+
+//手势密码样式
+#define kDrawLineWidth 4
+//未选中的按钮的颜色
+#define kDrawBtnUnselectColor [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.8]
+//选中的按钮颜色
+#define kDrawBtnSelectColor kCyan
+//正常的线条颜色
+#define kDrawLineRightColor kCyan
+//错误的线条颜色
+#define kDrawLineWrongColor [UIColor orangeColor]
+
+
+#define kBgIconGapLR kGap30
+#define kBgIconBgWidth (kScreenWidth - kBgIconGapLR*4)/4
+#define kBgIconBgHight (kBgIconBgWidth+kGap50)
+#define kBottomHeight (kScreenHeight-kBlankHeight)/3*2
+
+
+
+#import "LocalNoticeSetTableViewController.h"
+#import "LocalNoticeSetTableViewCell.h"
+#import "LocalNoticeModel.h"
+#import "LocalNoticeModelDBTool.h"
+
+#import "ClockTableViewController.h"
+#import "ClockTableViewCell.h"
+
+#import "CZPickerView.h"
+
+#import "DataBaseTool.h"
+#import "ColumnPropertyMappingDelegate.h"
+
+#import "FMDB.h"
+#import "JSONKit.h"
+
+#endif /* PrefixHeader_pch */

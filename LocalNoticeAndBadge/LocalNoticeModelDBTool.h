@@ -45,6 +45,14 @@
  */
 -(void)updateModelWithkey:(NSString *)key value:(NSString *)value nId:(NSString *)nId;
 /**
+ *  根据Id查询数据
+ *
+ *  @param noticeId noticeId
+ *
+ *  @return LocalNoticeModel
+ */
+- (LocalNoticeModel *)selectLocalNoticeModelWithNoticeId:(NSString *)noticeId;
+/**
  *  删除表
  */
 - (void)dropTable;

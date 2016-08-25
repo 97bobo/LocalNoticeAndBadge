@@ -20,16 +20,18 @@
 //时间选择Arr
 @property(strong,nonatomic)NSMutableArray *weeksArr;
 
-
+//当前闹钟
+@property(strong,nonatomic)LocalNoticeModel *noticeModel;
 
 //选中时间
 @property(strong,nonatomic)NSDate *selectedDate;
 
+
 @end
 static NSString *const clockCellID=@"clockCellID";
-static id _instace;
+//static id _instace;
 @implementation ClockTableViewController
-
+/*
 #pragma mark -----Login单例-----
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
     static dispatch_once_t onceToken;
@@ -50,7 +52,7 @@ static id _instace;
 -(id)copyWithZone:(NSZone *)zone{
     return _instace;
 }
-
+*/
 
 -(instancetype)initWithStyle:(UITableViewStyle)style
 {
@@ -63,6 +65,7 @@ static id _instace;
     }
     return self;
 }
+
 
 -(void)saveAction{
     /*
@@ -95,9 +98,18 @@ static id _instace;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.weeksArr options:NSJSONWritingPrettyPrinted error:nil];
         jsonStr = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-    NSDictionary *noticeDic = @{@"noticeTime":self.selectedDate,@"noticeWeek":jsonStr,@"isOpen":@"1"};
-    LocalNoticeModel *noticeModel =[[LocalNoticeModel alloc]initWithDictionary:noticeDic];
-    [noticeDBTool insertModel:noticeModel];
+    if (self.noticeId != nil) {
+        NSString *selectedDateStr = [NSString stringWithFormat:@"%f",[self.selectedDate timeIntervalSince1970]];
+        [noticeDBTool updateModelWithkey:@"nTime" value:selectedDateStr nId:self.noticeId];
+        [noticeDBTool updateModelWithkey:@"nWeek" value:jsonStr nId:self.noticeId];
+        [noticeDBTool updateModelWithkey:@"nIsOpen" value:@"1" nId:self.noticeId];
+    }
+    else
+    {
+        NSDictionary *noticeDic = @{@"noticeTime":self.selectedDate,@"noticeWeek":jsonStr,@"isOpen":@"1"};
+        LocalNoticeModel *noticeModel =[[LocalNoticeModel alloc]initWithDictionary:noticeDic];
+        [noticeDBTool insertModel:noticeModel];
+    }
 }
 
 
@@ -227,6 +239,14 @@ static id _instace;
     //注册cell
     
     [self.tableView registerClass:[ClockTableViewCell class] forCellReuseIdentifier:clockCellID];
+    if (self.noticeId != nil) {
+        LocalNoticeModelDBTool *noticeDBTool = [LocalNoticeModelDBTool shareInstance];
+        self.noticeModel = [noticeDBTool selectLocalNoticeModelWithNoticeId:self.noticeId];
+        
+        NSInteger num = [self.noticeModel.noticeTime integerValue];
+        self.selectedDate = [NSDate dateWithTimeIntervalSince1970:num];
+        self.weeksArr = [self.noticeModel.noticeWeek objectFromJSONString];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -286,25 +306,25 @@ static id _instace;
     
     // Configure the cell...
     cell.titleLabel.text = self.array[indexPath.row];
+    
     if (indexPath.row == 0) {
-        
+
         NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
         //[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"]; // 这里是用大写的 H
         [dateFormatter setDateFormat:@"HH:mm"];
-        
-        if (self.selectedDate == nil && self.timeStr != nil) {
-            cell.detailLabel.text = self.timeStr;
-        }else {
-            self.timeStr = [dateFormatter stringFromDate:self.selectedDate];
-            cell.detailLabel.text = self.timeStr;
+        if (self.selectedDate == nil) {
+            cell.detailLabel.text = [dateFormatter stringFromDate:[NSDate date]];
         }
+        else
+        {
+            cell.detailLabel.text = [dateFormatter stringFromDate:self.selectedDate];
+        }
+        
     }
     else if (indexPath.row == 1) {
         
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        if (self.weeksStr != nil) {
-            cell.detailLabel.text = self.weeksStr;
-        }
+        
         NSUInteger totalCount = self.weeksArr.count;
         switch (totalCount) {
             case 0:
@@ -368,6 +388,19 @@ static id _instace;
         
     }
     return cell;
+}
+
+//将时间字符串转换为HH：mm
+-(NSString *)getTimeStrWithNoticeTime:(NSString *)noticeTime{
+    NSInteger num = [noticeTime integerValue];
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    //[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"]; // 这里是用大写的 H
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:num];
+    NSString *dateStr = [dateFormatter stringFromDate:date];
+    return dateStr;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

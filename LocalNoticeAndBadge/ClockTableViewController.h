@@ -12,7 +12,7 @@
 /**
  *  通知页面单例
  */
-+(instancetype)shareClockTableViewController;
+//+(instancetype)shareClockTableViewController;
 
 // 设置本地通知
 + (void)registerLocalNotification:(NSString *)timeStr;
@@ -20,11 +20,8 @@
 + (void)cancelLocalNotificationWithKey:(NSString *)key;
 
 /**
- *  闹铃时间
+ *  闹钟Id
  */
-@property(strong,nonatomic)NSString *timeStr;
-/**
- *  重复时间
- */
-@property(strong,nonatomic)NSString *weeksStr;
+@property(strong,nonatomic)NSString *noticeId;
+
 @end

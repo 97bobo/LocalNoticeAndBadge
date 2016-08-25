@@ -214,8 +214,7 @@ static NSString * const localNoticeSetCell = @"localNoticeSetCell";
         [self.tableView setEditing:NO animated:YES];
         ClockTableViewController *clockVC = [ClockTableViewController new];
         LocalNoticeModel *noticeModel = self.dataArr[indexPath.row];
-        clockVC.timeStr = [self getTimeStrWithNoticeTime:noticeModel.noticeTime];
-        clockVC.weeksStr = noticeModel.noticeWeek;
+        clockVC.noticeId = noticeModel.noticeId;
         [self.navigationController pushViewController:clockVC animated:YES];
     }
     else

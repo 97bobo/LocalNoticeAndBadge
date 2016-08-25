@@ -75,7 +75,7 @@ static id _instance;
 }
 
 -(void)updateModelWithkey:(NSString *)key value:(NSString *)value nId:(NSString *)nId{
-    NSString *sql = [NSString stringWithFormat:@"update LocalNoticeModel set %@ = %@ where Id = %@",key,value,nId];
+    NSString *sql = [NSString stringWithFormat:@"update LocalNoticeModel set %@ = '%@' where Id = %@",key,value,nId];
     if ([_dbTool executeUpdate:sql param:nil]) {
         DLog(@"修改成功");
     }
@@ -88,6 +88,19 @@ static id _instance;
 - (NSArray *)selectAllModel
 {
     return [_dbTool executeQuery:@"select * from LocalNoticeModel" withArgumentsInArray:nil modelClass:[LocalNoticeModel class]];
+}
+
+- (LocalNoticeModel *)selectLocalNoticeModelWithNoticeId:(NSString *)noticeId
+{
+    NSString *sql = [NSString stringWithFormat:@"select * from LocalNoticeModel where Id = %@",noticeId];
+    NSArray *arr = [_dbTool executeQuery:sql withArgumentsInArray:nil modelClass:[LocalNoticeModel class]];
+    LocalNoticeModel *model = [[LocalNoticeModel alloc]init];
+    NSDictionary *dict = arr[0];
+    model.noticeId = [dict valueForKey:@"noticeId"];
+    model.noticeTime = [dict valueForKey:@"noticeTime"];
+    model.noticeWeek = [dict valueForKey:@"noticeWeek"];
+    model.isOpen = [dict valueForKey:@"isOpen"];
+    return model;
 }
 
 - (void)dropTable{

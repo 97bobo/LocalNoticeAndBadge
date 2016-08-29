@@ -106,6 +106,10 @@ static NSString *const clockCellID=@"clockCellID";
     }
     else
     {
+        if(self.selectedDate == nil)
+        {
+            self.selectedDate = [NSDate date];
+        }
         NSDictionary *noticeDic = @{@"noticeTime":self.selectedDate,@"noticeWeek":jsonStr,@"isOpen":@"1"};
         LocalNoticeModel *noticeModel =[[LocalNoticeModel alloc]initWithDictionary:noticeDic];
         [noticeDBTool insertModel:noticeModel];
